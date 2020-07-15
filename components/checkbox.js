@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { StyleSheet, Text, View, CheckBox } from "react-native";
 
@@ -9,8 +8,8 @@ export default function Checkbox(props) {
     <View style={styles.container}>
       <View style={styles.checkboxContainer}>
         <CheckBox
-          value={isSelected}
-          onValueChange={setSelection}
+          value={props.selected}
+          onValueChange={props.onValueChange}
           style={styles.checkbox}
         />
         <Text style={styles.label}>{props.label}</Text>

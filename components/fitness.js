@@ -1,13 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, CheckBox } from "react-native";
+import Checkbox from "./checkbox";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Fitness() {
   return (
     <View style={styles.container}>
       <Text h2>Fitness</Text>
-      <Text>Hello</Text>
-      <Text>new line</Text>
+      <Checkbox label="I have gone for a walk today" />
       <StatusBar style="auto" />
     </View>
   );

@@ -1,15 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import Fitness from "./components/fitness";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, CheckBox } from "react-native";
 
-export default function App() {
+export default function Fitness() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text h2>Fitness</Text>
       <Text>Hello</Text>
       <Text>new line</Text>
-      <Fitness />
       <StatusBar style="auto" />
     </View>
   );
@@ -17,7 +15,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, CheckBox } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import { CheckBox } from 'react-native-elements';
 
 export default function Checkbox(props) {
   const [isSelected, setSelection] = useState(false);
@@ -14,11 +15,11 @@ export default function Checkbox(props) {
     <View style={styles.container}>
       <View style={styles.checkboxContainer}>
         <CheckBox
-          value={isSelected}
-          onValueChange={updateValue}
+          checked={isSelected}
+          onPress={updateValue}
           style={styles.checkbox}
+          title={props.label}
         />
-        <Text style={styles.label}>{props.label}</Text>
       </View>
     </View>
   );

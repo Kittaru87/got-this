@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import Constants from 'expo-constants';
 import { Card } from 'react-native-elements'
 
-export default function Play() {
+export default function Living() {
   const [count, setCount] = useState(0);
   console.log(count);
 
@@ -17,21 +17,21 @@ export default function Play() {
   return (
 
     <View style={styles.container}>
-        <Card title="Play" style={styles.background}>
+        <Card title="Living" style={styles.background}>
           <Checkbox
-            label="Mario Kart"
+            label="Paid bills"
             incrementCount={incrementCount}
           />
           <Checkbox
-            label="Monopoly"
+            label="Cleaned kitchen"
             incrementCount={incrementCount}
           />
           <Checkbox
-            label="Chess"
+            label="Waterd plants"
             incrementCount={incrementCount}
           />
-          <Checkbox label="Darts" incrementCount={incrementCount} />
-          <Checkbox label="Lots and lots of television" incrementCount={incrementCount} />
+          <Checkbox label="Vaccumed house" incrementCount={incrementCount} />
+          <Checkbox label="Taken out rubbish" incrementCount={incrementCount} />
           <Text style={styles.total}>Section total: {showCount}</Text>
         </Card>
       </View>
@@ -41,7 +41,7 @@ export default function Play() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'green',
+    backgroundColor: 'blue',
     marginTop: Constants.statusBarHeight,
     paddingBottom: 15,
   },

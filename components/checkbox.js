@@ -8,16 +8,14 @@ export default function Checkbox(props) {
   const updateValue = () => {
     setSelection(!isSelected);
     props.incrementCount(isSelected);
-  }
+  };
 
   return (
     <View style={styles.container}>
       <View style={styles.checkboxContainer}>
         <CheckBox
           value={isSelected}
-          onValueChange={
-            updateValue
-          }
+          onValueChange={updateValue}
           style={styles.checkbox}
         />
         <Text style={styles.label}>{props.label}</Text>

@@ -41,7 +41,7 @@ export default function Self() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'pink',
+    backgroundColor: '#d9ead3',
     marginTop: Constants.statusBarHeight,
     paddingBottom: 15,
   },

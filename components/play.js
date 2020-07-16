@@ -41,7 +41,7 @@ export default function Play() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'green',
+    backgroundColor: '#ead1dc',
     marginTop: Constants.statusBarHeight,
     paddingBottom: 15,
   },

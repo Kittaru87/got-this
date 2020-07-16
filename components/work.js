@@ -41,7 +41,7 @@ export default function Work() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
+    backgroundColor: '#c9daf8',
     marginTop: Constants.statusBarHeight,
     paddingBottom: 15,
   },

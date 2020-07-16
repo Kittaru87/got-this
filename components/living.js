@@ -41,7 +41,7 @@ export default function Living() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blue',
+    backgroundColor: '#fce5cd',
     marginTop: Constants.statusBarHeight,
     paddingBottom: 15,
   },

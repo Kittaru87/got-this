@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import Constants from 'expo-constants';
 import { Card } from 'react-native-elements'
 
-export default function Self() {
+export default function Play() {
   const [count, setCount] = useState(0);
   console.log(count);
 
@@ -17,7 +17,7 @@ export default function Self() {
   return (
 
     <View style={styles.container}>
-        <Card title="Self" style={styles.background}>
+        <Card title="Play" style={styles.background}>
           <Checkbox
             label="I have gone for a walk today"
             incrementCount={incrementCount}
@@ -41,7 +41,7 @@ export default function Self() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'pink',
+    backgroundColor: 'green',
     marginTop: Constants.statusBarHeight,
     paddingBottom: 15,
   },

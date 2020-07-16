@@ -4,7 +4,7 @@ import { StyleSheet, Text, SafeAreaView, ScrollView } from "react-native";
 import Constants from 'expo-constants';
 import { Card } from 'react-native-elements'
 
-export default function Fitness() {
+export default function Self() {
   const [count, setCount] = useState(0);
   console.log(count);
 
@@ -18,7 +18,7 @@ export default function Fitness() {
 
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
-        <Card title="Fitness">
+        <Card title="Self">
           <Checkbox
             label="I have gone for a walk today"
             incrementCount={incrementCount}

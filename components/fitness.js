@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Checkbox from "./checkbox";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, SafeAreaView, ScrollView } from "react-native";
+import Constants from 'expo-constants';
+import { Card } from 'react-native-elements'
 
 export default function Fitness() {
   const [count, setCount] = useState(0);
@@ -13,34 +15,43 @@ export default function Fitness() {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.h2}>Fitness</Text>
-      <Checkbox
-        label="I have gone for a walk today"
-        incrementCount={incrementCount}
-      />
-      <Checkbox
-        label="I have done more than 30 mins exercise"
-        incrementCount={incrementCount}
-      />
-      <Checkbox
-        label="I have done more than an hour exercise"
-        incrementCount={incrementCount}
-      />
-      <Checkbox label="I did some yoga today" incrementCount={incrementCount} />
-      <Checkbox label="I went for a run" incrementCount={incrementCount} />
-      <Text>{showCount}</Text>
-    </View>
+
+    <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scrollView}>
+        <Card title="Fitness">
+          <Checkbox
+            label="I have gone for a walk today"
+            incrementCount={incrementCount}
+          />
+          <Checkbox
+            label="I have done more than 30 mins exercise"
+            incrementCount={incrementCount}
+          />
+          <Checkbox
+            label="I have done more than an hour exercise"
+            incrementCount={incrementCount}
+          />
+          <Checkbox label="I did some yoga today" incrementCount={incrementCount} />
+          <Checkbox label="I went for a run" incrementCount={incrementCount} />
+          <Text style={styles.total}>Section total: {showCount}</Text>
+        </Card>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    flex: 1,
+    marginTop: Constants.statusBarHeight,
   },
-
+  scrollView: {
+    backgroundColor: 'pink',
+    marginHorizontal: 20,
+  },
+  total: {
+    textAlign: 'center',
+  },
   h2: {
     fontSize: 20,
     fontWeight: "bold",

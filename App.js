@@ -1,24 +1,34 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import Fitness from "./components/fitness";
-import { StyleSheet, Text, View } from "react-native";
+import Self from "./components/self";
+import Play from "./components/play";
+import Living from "./components/living";
+import Work from "./components/work";
+import { StyleSheet, Text, ScrollView, SafeAreaView } from "react-native";
+import Constants from 'expo-constants';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+    <ScrollView style={styles.scrollView}>
       <Text>Got This</Text>
       <Text>Hello</Text>
-      <Fitness />
+      <Self />
+      <Play />
+      <Living />
+      <Work />
       <StatusBar style="auto" />
-    </View>
+    </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    marginTop: Constants.statusBarHeight,
+  },
+  scrollView: {
+    backgroundColor: 'white',
   },
 });

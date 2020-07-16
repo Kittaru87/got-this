@@ -12,7 +12,7 @@ export default function Checkbox(props) {
   };
 
   return (
-    <View style={styles.container}>
+    
       <View style={styles.checkboxContainer}>
         <CheckBox
           checked={isSelected}
@@ -21,15 +21,11 @@ export default function Checkbox(props) {
           title={props.label}
         />
       </View>
-    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    justifyContent: "center",
-  },
+ 
   checkboxContainer: {
     flexDirection: "row",
     marginBottom: 20,

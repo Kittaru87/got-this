@@ -5,6 +5,10 @@ import {
   TextInput,
   View,
   TouchableOpacity,
+  KeyboardAvoidingView, 
+  TouchableWithoutFeedback, 
+  Keyboard, 
+  Platform
 } from "react-native";
 import { RadioButton } from "react-native-paper";
 
@@ -17,7 +21,12 @@ export default function AddAchievement(props) {
   };
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+    behavior={Platform.OS === "ios" ? "padding" : null}
+    style={{ flex: 1 }}
+>
+       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+       <View>
       <TextInput
         placeholder="Enter achievement"
         onChangeText={onChangeAchievement}
@@ -69,11 +78,15 @@ export default function AddAchievement(props) {
         <Text style={styles.btnText}>Add Achievement</Text>
       </TouchableOpacity>
     </View>
+ </TouchableWithoutFeedback>
+        
+      </KeyboardAvoidingView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+  flex: 1,
     margin: 20,
   },
   btn: {
@@ -102,4 +115,5 @@ const styles = StyleSheet.create({
     padding: 10,
     marginTop: 10,
   },
+
 });

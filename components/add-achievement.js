@@ -9,7 +9,6 @@ import {
 import { RadioButton } from "react-native-paper";
 
 export default function AddAchievement(props) {
-  // const [checked, setChecked] = React.useState("first");
   const [achievement, setAchievement] = useState("");
   const [category, setCategory] = useState("Self");
 

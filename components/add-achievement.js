@@ -14,13 +14,10 @@ export default function AddAchievement(props) {
     setCategory(text);
   };
 
-  const showAchievement = achievement;
-  const showCategory = category;
 
-  
   return (
     
-      <View style={styles.checkboxContainer}>
+      <View style={styles.container}>
           <TextInput placeholder="Enter achievement" onChangeText={onChangeAchievement} style={styles.txtInput} multiline numberOfLines={4}></TextInput>
           <TextInput placeholder="Enter category" onChangeText={onChangeCategory} style={styles.txtInput}></TextInput>
           <TouchableOpacity style={styles.btn} onPress={() => props.addAchievement(achievement, category)}>
@@ -28,18 +25,19 @@ export default function AddAchievement(props) {
                   Add Achievement
               </Text>
           </TouchableOpacity>
-          <Text>{showAchievement}</Text>
-          <Text>{showCategory}</Text>
       </View>
   );
 }
 
 const styles = StyleSheet.create({
- 
+    container: {
+        margin: 20,
+        
+    },
     btn: {
         backgroundColor: '#c2bad8',
-        padding: 9,
-        margin: 5,
+        padding: 10,
+        marginTop: 10,
       },
       btnText: {
         color: 'darkslateblue',
@@ -52,5 +50,6 @@ const styles = StyleSheet.create({
           borderStyle: 'solid',
           fontSize: 18,
           padding: 10,
+          marginTop: 10,
       }
 });

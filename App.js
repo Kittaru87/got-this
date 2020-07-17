@@ -4,6 +4,7 @@ import Self from "./components/self";
 import Play from "./components/play";
 import Living from "./components/living";
 import Work from "./components/work";
+import AddAchievement from "./components/add-achievement";
 import { StyleSheet, Text, ScrollView, SafeAreaView } from "react-native";
 import Constants from 'expo-constants';
 
@@ -32,10 +33,12 @@ export default function App() {
     {achievement: 'Taken out rubbish', category: 'Living'},
   ]);
 
-  const addItem = (achievement, category) => {
-    setItems((prevItems) => {
-      return [{achievement, category }, ...prevItems];
+  const addAchievement = (achievement, category) => {
+    setAchievements((prevItems) => {
+      return [{achievement, category}, ...prevItems];
+      
     });
+    console.log(achievements);
   }
 
   return (
@@ -43,6 +46,7 @@ export default function App() {
     <ScrollView style={styles.scrollView}>
       <Text>Got This</Text>
       <Text>Hello</Text>
+      <AddAchievement addAchievement={addAchievement}/>
       <Self />
       <Play />
       <Living />

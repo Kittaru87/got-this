@@ -15,7 +15,7 @@ export default function Checkbox(props) {
     <View style={styles.checkboxContainer}>
       <CheckBox
         checked={isSelected}
-        onPress={() => updateValue}
+        onPress={() => updateValue()}
         style={styles.checkbox}
         title={props.label}
       />

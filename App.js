@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
+import Nav from "./components/nav";
 import Self from "./components/self";
 import Play from "./components/play";
 import Living from "./components/living";
@@ -85,8 +86,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
-        <Text>Got This</Text>
-        <Text>Hello</Text>
+        <Nav />
         <Self />
         <Play />
         <Living />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, TextInput, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TextInput, View, TouchableOpacity, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, Platform} from "react-native";
 
 export default function AddAchievement(props) {
 
@@ -16,8 +16,13 @@ export default function AddAchievement(props) {
 
 
   return (
-    
-      <View style={styles.container}>
+      
+    <KeyboardAvoidingView
+    behavior={Platform.OS === "ios" ? "padding" : null}
+    style={{ flex: 1 }}
+>
+       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+       <View>
           <TextInput placeholder="Enter achievement" onChangeText={onChangeAchievement} style={styles.txtInput} multiline numberOfLines={4}></TextInput>
           <TextInput placeholder="Enter category" onChangeText={onChangeCategory} style={styles.txtInput}></TextInput>
           <TouchableOpacity style={styles.btn} onPress={() => props.addAchievement(achievement, category)}>
@@ -25,14 +30,18 @@ export default function AddAchievement(props) {
                   Add Achievement
               </Text>
           </TouchableOpacity>
-      </View>
+          </View>
+        </TouchableWithoutFeedback>
+        
+      </KeyboardAvoidingView>
+      
   );
 }
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         margin: 20,
-        
     },
     btn: {
         backgroundColor: '#c2bad8',

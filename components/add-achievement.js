@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   btn: {
     backgroundColor: "#c2bad8",
     padding: 10,
-    marginTop: 10,
+    margin: 20,
   },
   btnText: {
     color: "darkslateblue",

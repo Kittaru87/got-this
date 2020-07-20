@@ -14,10 +14,6 @@ export default function App() {
   const [playCount, setPlayCount] = useState(0);
   const [livingCount, setLivingCount] = useState(0);
   const [workCount, setWorkCount] = useState(0);
-  console.log("self count:" + selfCount);
-  console.log("play count:" + playCount);
-  console.log("living Count:" + livingCount);
-  console.log("work count:" + workCount);
 
   const incrementSelfCount = (isSelected) => {
     isSelected ? setSelfCount(selfCount - 1) : setSelfCount(selfCount + 1);

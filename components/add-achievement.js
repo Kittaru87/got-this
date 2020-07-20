@@ -72,7 +72,6 @@ export default function AddAchievement(props) {
               <Text style={styles.radioBtnText}>Play</Text>
             </View>
           </View>
-
           <TouchableOpacity
             style={styles.btn}
             onPress={() => props.addAchievement(achievement, category)}
@@ -111,6 +110,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontWeight: "bold",
   },
+
   txtInput: {
     borderColor: "black",
     borderWidth: 2,
@@ -118,5 +118,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     padding: 10,
     margin: 20,
+
   },
 });

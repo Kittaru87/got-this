@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Header } from "react-native-elements";
 
-export default function Nav() {
+export default function Nav(props) {
   return (
     <Header
       style={styles.header}
